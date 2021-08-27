@@ -13,16 +13,16 @@ export const NavBar = (props) => {
                 <Link className="nav-link" to="/">Games</Link>
             </li>
             
-            <li className="nav-item">
+            {/* <li className="nav-item">
                 <Link className="nav-link" to="/events">Events</Link>
-            </li>
+            </li> */}
 
             {
-                (localStorage.getItem("lu_token") !== null) ?
+                (localStorage.getItem("rater_token") !== null) ?
                     <li className="nav-item">
                         <button className="nav-link fakeLink"
                             onClick={() => {
-                                localStorage.removeItem("lu_token")
+                                localStorage.removeItem("rater_token")
                                 props.history.push({ pathname: "/" })
                             }}
                         >Logout</button>

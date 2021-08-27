@@ -8,7 +8,7 @@ import { Register } from "./auth/Register"
 export const Rater = () => (
     <>
         <Route render={() => {
-            if (localStorage.getItem("lu_token")) {
+            if (localStorage.getItem("rater_token")) {
                 return <>
                     <Route render={NavBar} />
                     <Route render={props => <ApplicationViews {...props} />} />
